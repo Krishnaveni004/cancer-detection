@@ -1,0 +1,38 @@
+.navbar .navbar-brand{
+	color:#fff;
+    font-size: 1rem;
+}
+
+.jumbotron{
+	background-image: url('jumbo-bg6.jpg');
+	background-size: cover;
+}
+
+.second-jumbo{
+    background-image: url('bg-2.jpg');
+	background-size: cover;
+}
+
+.bg-custom{
+    background-color: #339ec2;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #fff !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.body-bg{
+    background-image: url('jumbo-bg3.jpg');
+    object-fit: contain;
+}
