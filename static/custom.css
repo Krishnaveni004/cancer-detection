@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
+
+* {
+    font-family: 'Josefin Sans',
+        sans-serif !important;
+}
+
 .navbar .navbar-brand{
 	color:#fff;
     font-size: 1rem;
 }
 
+.result {
+    font-family: 'Josefin Sans',
+        sans-serif !important;
+    font-size: 14px;
+}
+
 .jumbotron{
 	background-image: url('jumbo-bg6.jpg');
-	background-size: cover;
+    background-size: cover;
+    font-weight: bold;
 }
 
 .second-jumbo{

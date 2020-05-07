@@ -6,7 +6,8 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href=" {% static 'custom.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href=" {% static 'custom-new.css' %}">
     
     <title>My Project</title>
 </head>
@@ -21,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href=""><b>Home</b></a>
+                    <a class="nav-item nav-link" href="/"><b>Home</b></a>
                     <a class="nav-item nav-link" href="/about"><b>About</b></a>
                     <a class="nav-item nav-link" href="/heatmap"><b>Heatmap</b></a>
                 </div>
@@ -51,7 +52,7 @@
                 </div> 
             </div>
             
-            <div class="col-lg-6">
+            <div class="col-lg-6 result">
                 <p>Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. These contrast with benign tumors, which do not spread. Possible signs and symptoms include a lump, abnormal bleeding, prolonged cough, unexplained weight loss, and a change in bowel movements. While these symptoms may indicate cancer, they can also have other causes. Over 100 types of cancers affect humans.</p>
                 <p>Cancer Probability: <span id="probability">{{ predicted_probability }}</span></p>
                 <p>Cancer Category: <span id="probability">{{ predicted_class }}</span></p>

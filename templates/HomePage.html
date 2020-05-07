@@ -20,7 +20,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href=""><b>Home</b></a>
+                    <a class="nav-item nav-link" href="/"><b>Home</b></a>
                     <a class="nav-item nav-link" href="/about"><b>About</b></a>
                     <a class="nav-item nav-link" href="/heatmap"><b>Heatmap</b></a>
                 </div>
@@ -41,19 +41,19 @@
     <div class="container">
         <!--main row-->
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-4 col-lg-4">
                 <div class="card mb-3">
-                    <img src="{% static 'lung-x-ray2.jpg' %}" class="card-img-top" alt="Vivianne McVue">
+                    <img src="{% static 'ct-scan-image3.jpg' %}" class="card-img-top" alt="Vivianne McVue">
                     <div class="card-body">
                         <form action="/predict-dicom/" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <h4 class="card-title text-center">
-                                X-ray
+                                CT - Scan
                                 <button type="submit" class="btn btn-info">Upload</button>
                                 <div class="input-group pt-2">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input btn" multiple name="dicom_images" id="dicom_images" aria-describedby="dicom_images">
-                                        <label class="custom-file-label btn" for="dicom_images">Choose file</label>
+                                        <input type="file" class="custom-file-input btn" name="dicom_image" id="dicom_image" aria-describedby="dicom_images">
+                                        <label class="custom-file-label btn" for="dicom_image">Choose file</label>
                                     </div>
                                 </div>
                             </h4>
@@ -62,28 +62,7 @@
                 </div>
             </div>
             
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <img src="{% static 'biopsy-image.jpeg' %}" class="card-img-top" alt="NodeStradamus">
-                    <div class="card-body">
-                        <form action="/predict-dicom/" method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <h4 class="card-title text-center">
-                                Biopsy
-                                <button type="submit" class="btn btn-info">Upload</button>
-                                <div class="input-group pt-2">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input btn" multiple name="biopsy-image" id="biopsy-image" aria-describedby="dicom_images">
-                                        <label class="custom-file-label btn" for="biopsy-image">Choose file</label>
-                                    </div>
-                                </div>
-                            </h4>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-4 col-lg-4">
                 <div class="card mb-3">
                     <img src= "{% static 'mammogram-image.png' %}" class="card-img-top" alt="Robbie Redux">
                     <div class="card-body">
@@ -104,42 +83,27 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-6 col-lg-4">
+
+            <div class="col-md-4 col-lg-4">
                 <div class="card mb-3">
-                    <img src="static/ct-scan-image3.jpg" class="card-img-top" alt="Ecma Scriptnstuff">
+                    <img src= "{% static 'lung-x-ray2.jpg' %}" class="card-img-top" alt="Robbie Redux">
                     <div class="card-body">
-                        <h4 class="card-title text-center">
-                            CT Scan
-                            <button type="submit" class="btn btn-info">Upload</button>
-                        </h4>
+                        <form action="/predict-lung-image/" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            
+                            <h4 class="card-title text-center">
+                                Lung X-ray
+                                <button type="submit" class="btn btn-info">Upload</button>
+                                <div class="input-group pt-2">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input btn" multiple name="x-ray-image" id="x-ray-image" aria-describedby="dicom_images">
+                                        <label class="custom-file-label btn" for="x-ray-image">Choose file</label>
+                                    </div>
+                                </div>
+                            </h4>
+                        </form>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <img src="static/mri-scan.png" class="card-img-top" alt="Jay Query">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">
-                            MRI Scan
-                            <button type="submit" class="btn btn-info">Upload</button>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <img src="static/pet-scan.png" class="card-img-top" alt="Json Babel">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">
-                            PET/CT Scan
-                            <button type="submit" class="btn btn-info">Upload</button>
-                        </h4>
-                    </div>
-                </div>
-                
             </div>
         </div><!-- /main stuff -->
     </div>

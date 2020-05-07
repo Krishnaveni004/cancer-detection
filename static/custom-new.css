@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
+
+* {
+    font-family: 'Josefin Sans',
+        sans-serif !important;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.jumbotron {
+    background-image: url('jumbo-bg6.jpg');
+    background-size: cover;
+    background-color: #0984e3;
+
+}
+
+.custom-file-input {
+    background-color: #0984e3;
+}
+
+.btn-info {}
+
+.second-jumbo {
+    background-image: url('bg-2.jpg');
+    background-size: cover;
+}
+
+.bg-custom {
+    background-color: #0984e3;
+}
+
+.accent-color {
+    color: #0984e3;
+}
+
+.accent-color {
+    color: #0984e3;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #fff !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.body-bg {
+    background-image: url('jumbo-bg3.jpg');
+    object-fit: contain;
+}
+
+.result {
+    font-size: 14px;
+}
